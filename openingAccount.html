@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Grievance Redressal Uplabdh</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="assets/img/logo.webp" alt="">
+                <h1 class="sitename">Instant</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="dropdown"><a href="#"><span>Services</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li class="dropdown"><a href="#"><span>Loans</span> <i
+                                        class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">Property Loan</a></li>
+                                    <li><a href="#">Gold Loan</a></li>
+                                    <li><a href="#">Education Loan</a></li>
+                                    <li><a href="#">Mortage Loan</a></li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>Deposit Scheme</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+                        <ul>
+                            <li><a href="#">Saving</a></li>
+                            <li><a href="#">Daily Deposit</a></li>
+                            <li><a href="#">Requrring Deposit</a></li>
+                            <li><a href="#">Fixed Deposit</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown"><a href="#"><span>Uplabdh Care</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+                        <ul>
+
+                            <li><a href="#">Loan Calculator</a></li>
+                            <li><a href="#">Call Me Back</a></li>
+                            <li><a href="#">Find Your nearest Branch</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#"><span>Contact</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Grivence Redressal</a></li>
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="index.html#about">Net Banking</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="bg-contact d-flex justify-content-center align-items-center text-white">
+            <div class="contact-us py-5 position-relative z-3">
+                <h1 class="fw-bold text-center">Opening Saving Account</h1>
+            </div>
+        </div>
+
+        <section class="account-opening-section  ">
+            <div class="account-opening-container">
+                <div class="container ">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-lg-10 col-xl-9">
+                            <form class=" row g-3 ">
+
+                                <div class="col-12 form-section-header">
+                                    <h4>Personal Detail</h4>
+                                    <hr class="section-divider">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="branchName" class="form-label form-label-custom">Name of Branch</label>
+                                    <select id="branchName" class="form-select">
+                                        <option selected>Head Office</option>
+                                        <option>Branch A</option>
+                                        <option>Branch B</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="workerCode" class="form-label form-label-custom">Worker Code</label>
+                                    <input type="text" class="form-control" id="workerCode" value="W0000000" readonly>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label form-label-custom">Name of Applicant</label>
+                                    <div class="input-group">
+                                        <select class="form-select" id="applicantPrefix">
+                                            <option value="Mr.">Mr.</option>
+                                            <option value="Mrs.">Mrs.</option>
+                                            <option value="Miss">Miss</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="applicantName"
+                                            placeholder="Enter Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label form-label-custom">Father's/Husband's Name</label>
+                                    <div class="input-group">
+                                        <select class="form-select" id="relationPrefix">
+                                            <option value="S/O">S/O</option>
+                                            <option value="D/O">D/O</option>
+                                            <option value="W/O">W/O</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="fathersHusbandName"
+                                            placeholder="Enter Name">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="correspondanceAddress"
+                                        class="form-label form-label-custom">Correspondence Address</label>
+                                    <textarea class="form-control" id="correspondanceAddress" rows="3"></textarea>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="city" class="form-label form-label-custom">City</label>
+                                    <input type="text" class="form-control" id="city" placeholder="">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="state" class="form-label form-label-custom">State</label>
+                                    <select id="state" class="form-select">
+                                        <option selected>Haryana</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Delhi</option>
+                                        <option>Maharashtra</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="pincode" class="form-label form-label-custom">Pincode</label>
+                                    <input type="text" class="form-control" id="pincode" placeholder="">
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="sameAddressCheck">
+                                        <label class="form-check-label" for="sameAddressCheck">
+                                            Permanent Address Same as Correspondence Address
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12" id="permanentAddressFields">
+                                    <label for="permanentAddress" class="form-label form-label-custom">Permanent
+                                        Address</label>
+                                    <textarea class="form-control" id="permanentAddress" rows="3"></textarea>
+                                </div>
+                                <div class="col-md-4" id="permanentCityField">
+                                    <label for="permanentCity" class="form-label form-label-custom">City</label>
+                                    <input type="text" class="form-control" id="permanentCity" placeholder="">
+                                </div>
+                                <div class="col-md-4" id="permanentStateField">
+                                    <label for="permanentState" class="form-label form-label-custom">State</label>
+                                    <select id="permanentState" class="form-select">
+                                        <option selected>Haryana</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Delhi</option>
+                                        <option>Maharashtra</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4" id="permanentPincodeField">
+                                    <label for="permanentPincode" class="form-label form-label-custom">Pincode</label>
+                                    <input type="text" class="form-control" id="permanentPincode" placeholder="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="dob" class="form-label form-label-custom">Date of Birth*</label>
+                                    <input type="text" class="form-control" id="dob"
+                                        placeholder="dd/MM/yyyy eg.01/Jan/2000" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sex" class="form-label form-label-custom">Sex</label>
+                                    <select id="sex" class="form-select">
+                                        <option selected>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="panCardNumber" class="form-label form-label-custom">PAN Card
+                                        Number</label>
+                                    <input type="text" class="form-control" id="panCardNumber" placeholder="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="mobileNumber" class="form-label form-label-custom">Mobile Number</label>
+                                    <input type="tel" class="form-control" id="mobileNumber" placeholder="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="emailId" class="form-label form-label-custom">E-mail ID</label>
+                                    <input type="email" class="form-control" id="emailId" placeholder="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="educationQualification" class="form-label form-label-custom">Education
+                                        Qualification</label>
+                                    <input type="text" class="form-control" id="educationQualification" placeholder="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="presentOccupation" class="form-label form-label-custom">Present
+                                        Occupation</label>
+                                    <input type="text" class="form-control" id="presentOccupation" placeholder="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="identityProof" class="form-label form-label-custom">Identity
+                                        Proof</label>
+                                    <select id="identityProof" class="form-select">
+                                        <option selected disabled value="">-Select-</option>
+                                        <option>Aadhar Card</option>
+                                        <option>Passport</option>
+                                        <option>Driving License</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="identityProofNumber" class="form-label form-label-custom">Identity Proof
+                                        Number</label>
+                                    <input type="text" class="form-control" id="identityProofNumber" placeholder="">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="addressProof" class="form-label form-label-custom">Address Proof</label>
+                                    <select id="addressProof" class="form-select">
+                                        <option selected disabled value="">-Select-</option>
+                                        <option>Aadhar Card</option>
+                                        <option>Utility Bill</option>
+                                        <option>Bank Statement</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="addressProofNumber" class="form-label form-label-custom">Address Proof
+                                        Number</label>
+                                    <input type="text" class="form-control" id="addressProofNumber" placeholder="">
+                                </div>
+
+                                <div class="col-md-4 col-lg-3 col-6 mt-4">
+                                    <h5 class="upload-section-title">Photo Upload</h5>
+                                    <div class="file-upload-area" id="photoUploadArea">
+                                        <input type="file" id="photoInput" class="hidden-file-input" accept="image/*">
+                                        <label for="photoInput" class="upload-label">
+                                            <i class="bi bi-plus-circle-fill upload-icon"></i>
+                                            <p>Drag & drop or click to choose files</p>
+                                            <small><i class="bi bi-info-circle"></i> Max file size: 10 MB</small>
+                                        </label>
+                                        <div class="file-list" id="photoFileList">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-lg-3 col-6 mt-4">
+                                    <h5 class="upload-section-title">Signature Upload</h5>
+                                    <div class="file-upload-area" id="signatureUploadArea">
+                                        <input type="file" id="signatureInput" class="hidden-file-input"
+                                            accept="image/*">
+                                        <label for="signatureInput" class="upload-label">
+                                            <i class="bi bi-plus-circle-fill upload-icon"></i>
+                                            <p>Drag & drop or click to choose files</p>
+                                            <small><i class="bi bi-info-circle"></i> Max file size: 10 MB</small>
+                                        </label>
+                                        <div class="file-list" id="signatureFileList">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-lg-3 col-6 mt-4">
+                                    <h5 class="upload-section-title">Aadhar Documents</h5>
+                                    <div class="file-upload-area" id="aadharUploadArea">
+                                        <input type="file" id="aadharInput" class="hidden-file-input"
+                                            accept="image/*,application/pdf" multiple>
+                                        <label for="aadharInput" class="upload-label">
+                                            <i class="bi bi-plus-circle-fill upload-icon"></i>
+                                            <p>Drag & drop or click to choose files</p>
+                                            <small><i class="bi bi-info-circle"></i> Max file size: 10 MB</small>
+                                        </label>
+                                        <div class="file-list" id="aadharFileList">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-lg-3 col-6 mt-4">
+                                    <h5 class="upload-section-title">KYC Documents</h5>
+                                    <div class="file-upload-area" id="kycUploadArea">
+                                        <input type="file" id="kycInput" class="hidden-file-input"
+                                            accept="image/*,application/pdf" multiple>
+                                        <label for="kycInput" class="upload-label">
+                                            <i class="bi bi-plus-circle-fill upload-icon"></i>
+                                            <p>Drag & drop or click to choose files</p>
+                                            <small><i class="bi bi-info-circle"></i> Max file size: 10 MB</small>
+                                        </label>
+                                        <div class="file-list" id="kycFileList">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 form-section-header mt-4">
+                                    <h4>Types of Savings Account</h4>
+                                    <hr class="section-divider">
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-2 account-type-radios">
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="namiShaktiSaving" value="NAMI SHAKTI SAVING A/C">
+                                                <label class="form-check-label" for="namiShaktiSaving">
+                                                    NAMI SHAKTI SAVING A/C
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="normalSaving" value="NORMAL SAVINGS A/C">
+                                                <label class="form-check-label" for="normalSaving">
+                                                    NORMAL SAVINGS A/C
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="privyLeague" value="PRIVY LEAGUE">
+                                                <label class="form-check-label" for="privyLeague">
+                                                    PRIVY LEAGUE
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="royalSaving" value="ROYAL SAVINGS ACCOUNT">
+                                                <label class="form-check-label" for="royalSaving">
+                                                    ROYAL SAVINGS ACCOUNT
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="shaktiSaving" value="SHAKTI SAVING A/C">
+                                                <label class="form-check-label" for="shaktiSaving">
+                                                    SHAKTI SAVING A/C
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="salariedSaving" value="SALARIED SAVING A/C">
+                                                <label class="form-check-label" for="salariedSaving">
+                                                    SALARIED SAVING A/C
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="scholarshipAc" value="SCHOLARSHIP A/C">
+                                                <label class="form-check-label" for="scholarshipAc">
+                                                    SCHOLARSHIP A/C
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="accountType"
+                                                    id="vipSavings" value="VIP SAVINGS ACCOUNT">
+                                                <label class="form-check-label" for="vipSavings">
+                                                    VIP SAVINGS ACCOUNT
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mt-4">
+                                    <label for="amount" class="form-label form-label-custom">Amount</label>
+                                    <input type="text" class="form-control" id="amount" placeholder="">
+                                    <small class="form-text text-muted">(Minimum amount opening balance + Member
+                                        share)</small>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="termsCondition1" required>
+                                        <label class="form-check-label" for="termsCondition1">
+                                            I have read and understand the T&C of the company and I am accepting the
+                                            terms and Conditions of Shubh Bhavishya Nidhi Limited, <a href="#"
+                                                class="text-decoration-none">click here</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="termsCondition2" required>
+                                        <label class="form-check-label" for="termsCondition2">
+                                            I have read and understand the T&C of the company and I am accepting the
+                                            terms and Conditions of Shubh Bhavishya Nidhi Limited, <a href="#"
+                                                class="text-decoration-none">click here</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit"
+                                        class="btn btn-primary px-4 py-2 mb-2 loansButton  fw-semibold ">Proceed To
+                                        Pay</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+    <footer id="footer" class="footer light-background">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 footer-about">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <span class="sitename">UPLABDH</span>
+                        </a>
+                        <div class="footer-contact pt-3">
+                            <p>A108 Adam Street</p>
+                            <p>New York, NY 535022</p>
+                            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                            <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="about-us.php">About Us</a></li>
+                            <li><a href="our-story.php">Our Story</a></li>
+                            <li><a href="customer-stories.php">Customer Stories</a></li>
+                            <li><a href="#">Property Loan</a></li>
+                            <li><a href="#">Gold Loan</a></li>
+                            <li><a href="#">Loan Againts Deposit</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Our Schemes</h4>
+                        <ul>
+                            <li><a href="#">Saving</a></li>
+                            <li><a href="#">Daily Deposit</a></li>
+                            <li><a href="#">Requrring Deposit</a></li>
+                            <li><a href="#">Fixed Deposit</a></li>
+
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>UPLABDH Care</h4>
+                        <ul>
+                            <li><a href="#">Call Me Back</a></li>
+                            <li><a href="#">Find Your nearest Branch</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Tolls and Resources</h4>
+                        <ul>
+                            <li><a href="#">Loan Calculator</a></li>
+                            <li><a href="#">Forms & Documents</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 footer-links">
+                        <h4 class="widget-title">Terms, Polices &amp; Regulations</h4>
+
+                        <ul class="customlink">
+                            <li><a href="#">Terms &amp; Policies</a></li>
+                            <li><a href="#">Regulatory Disclosures</a></li>
+                            <li><a href="#">Rates &amp; Charges</a></li>
+                            <li><a href="#">Forms</a></li>
+                            <li><a href="#">RBI Advisory Notifications</a></li>
+                            <li><a href="#">Services for Differently Abled</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                            <li><a href="#" target="_blank">RBI Kehta Hai</a></li>
+                            <li><a href="#">Communication Archives</a></li>
+                            <li><a href="#">Financial Literacy Week 2021</a></li>
+                            <li><a href="#">Important Notices</a></li>
+                            <li><a href="#">Report unauthorized electronic transactions</a></li>
+                            <li><a href="#">CSR</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+
+                        </ul>
+
+
+                    </div>
+
+                    <div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright text-center">
+                <div
+                    class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+                    <div class="d-flex flex-column align-items-center align-items-lg-start">
+                        <div>
+                            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
+                        </div>
+                        <div class="credits">
+                            <!-- All the links in the footer should remain intact. -->
+                            <!-- You can delete the links only if you purchased the pro version. -->
+                            <!-- Licensing information: https://Asif-Ali.com/license/ -->
+                            <!-- Purchase the pro version with working PHP/AJAX contact form: https://Asif-Ali.com/herobiz-bootstrap-business-template/ -->
+                            Designed by <a href="https://Asif-Ali.com/">Asif-Ali</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle Permanent Address Fields
+            const sameAddressCheck = document.getElementById('sameAddressCheck');
+            const permanentAddressFields = document.getElementById('permanentAddressFields');
+            const permanentCityField = document.getElementById('permanentCityField');
+            const permanentStateField = document.getElementById('permanentStateField');
+            const permanentPincodeField = document.getElementById('permanentPincodeField');
+
+            function togglePermanentAddressFields() {
+                const displayStyle = sameAddressCheck.checked ? 'none' : 'block';
+                permanentAddressFields.style.display = displayStyle;
+                permanentCityField.style.display = displayStyle;
+                permanentStateField.style.display = displayStyle;
+                permanentPincodeField.style.display = displayStyle;
+            }
+
+            togglePermanentAddressFields();
+            sameAddressCheck.addEventListener('change', togglePermanentAddressFields);
+
+            // --- File Upload Handling ---
+            const fileUploadAreas = [
+                { inputId: 'photoInput', listId: 'photoFileList', iconClass: 'bi-file-earmark-image' },
+                { inputId: 'signatureInput', listId: 'signatureFileList', iconClass: 'bi-file-earmark-signature' },
+                { inputId: 'aadharInput', listId: 'aadharFileList', iconClass: 'bi-file-earmark-text' }, // Aadhar can be multiple
+                { inputId: 'kycInput', listId: 'kycFileList', iconClass: 'bi-file-earmark-text' } // KYC can be multiple
+            ];
+
+            fileUploadAreas.forEach(area => {
+                const fileInput = document.getElementById(area.inputId);
+                const fileListContainer = document.getElementById(area.listId);
+
+                if (fileInput && fileListContainer) {
+                    fileInput.addEventListener('change', function (event) {
+                        fileListContainer.innerHTML = ''; // Clear previous files for single file inputs
+                        const files = event.target.files;
+
+                        if (files.length > 0) {
+                            Array.from(files).forEach(file => {
+                                const fileItem = document.createElement('div');
+                                fileItem.classList.add('uploaded-file-item');
+                                fileItem.innerHTML = `
+                            <div class="file-info">
+                                <span class="file-icon-type"><i class="bi ${getFileIcon(file.name)}"></i></span>
+                                <div class="file-details">
+                                    <span class="file-name">${file.name}</span>
+                                    <span class="file-size">${formatBytes(file.size)}</span>
+                                </div>
+                            </div>
+                            <div class="file-actions">
+                                <button type="button" class="btn btn-sm btn-icon download-file-btn" data-file-name="${file.name}" data-file-url="${URL.createObjectURL(file)}"><i class="bi bi-download"></i></button>
+                                <button type="button" class="btn btn-sm btn-icon remove-file-btn"><i class="bi bi-trash"></i></button>
+                            </div>
+                        `;
+                                fileListContainer.appendChild(fileItem);
+
+                                // Add event listener for remove button
+                                fileItem.querySelector('.remove-file-btn').addEventListener('click', function () {
+                                    fileItem.remove();
+                                    // In a real application, you'd also clear the file input or a hidden input array
+                                    // For simplicity, we just remove the visual item here.
+                                    // To actually clear the input, you might need to recreate it or use a DataTransfer object.
+                                });
+
+                                // Add event listener for download button (for local files)
+                                fileItem.querySelector('.download-file-btn').addEventListener('click', function () {
+                                    const url = this.dataset.fileUrl;
+                                    const fileName = this.dataset.fileName;
+                                    const a = document.createElement('a');
+                                    a.href = url;
+                                    a.download = fileName;
+                                    document.body.appendChild(a);
+                                    a.click();
+                                    document.body.removeChild(a);
+                                    URL.revokeObjectURL(url); // Clean up
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+
+            // Helper function to get file icon based on extension
+            function getFileIcon(fileName) {
+                const ext = fileName.split('.').pop().toLowerCase();
+                if (['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].includes(ext)) {
+                    return 'bi-file-earmark-image';
+                } else if (ext === 'pdf') {
+                    return 'bi-file-earmark-pdf';
+                } else if (ext === 'zip' || ext === 'rar' || ext === '7z') {
+                    return 'bi-file-earmark-zip';
+                } else if (ext === 'doc' || ext === 'docx') {
+                    return 'bi-file-earmark-word';
+                } else if (ext === 'xls' || ext === 'xlsx') {
+                    return 'bi-file-earmark-excel';
+                } else if (ext === 'ppt' || ext === 'pptx') {
+                    return 'bi-file-earmark-ppt';
+                }
+                return 'bi-file-earmark'; // Default file icon
+            }
+
+            // Helper function to format file size
+            function formatBytes(bytes, decimals = 2) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const dm = decimals < 0 ? 0 : decimals;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+            }
+
+            // No need for previous contact options JS as it's not in the new main section
+        });
+    </script>
+</body>
+
+</html>
