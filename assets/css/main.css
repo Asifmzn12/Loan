@@ -138,7 +138,7 @@ p{
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-width: 180px;
   margin-right: 8px;
 }
 
@@ -195,7 +195,9 @@ p{
   /* optional border */
 }
 
-
+.scrolled .mobile-nav-toggle{
+  color: white;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -714,12 +716,11 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding-top: 120px;
+  padding-top: 50px;
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 96%) 0%, var(--background-color) 40%, color-mix(in srgb, var(--accent-color), transparent 98%) 100%);
   padding-bottom: 60px;
 }
 
@@ -728,7 +729,6 @@ section,
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 85%) 0%, transparent 70%);
   border-radius: 50%;
   top: -20%;
   right: -10%;
@@ -757,12 +757,12 @@ section,
 }
 
 .hero .hero-title {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 900;
-  color: var(--heading-color);
-  line-height: 1.1;
+  line-height: 1.5;
   margin-bottom: 25px;
   letter-spacing: -0.02em;
+
 }
 
 @media (max-width: 768px) {
@@ -798,7 +798,6 @@ section,
 
 .hero .hero-description {
   font-size: 1.2rem;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 600px;
@@ -1012,7 +1011,19 @@ section,
 
 @media (max-width: 576px) {
   .hero {
-    padding: 100px 0 30px;
+    padding: 30px 0 30px;
+  }
+  .header .logo img{
+    max-width: 150px;
+  }
+  .page-hero-content{
+    width: 100%;
+  }
+  .about-hero-section {
+    height: 270px !important;
+  }
+  p, .main ul li, .main ol li {
+    font-size: 16px;
   }
 
   .hero .hero-badge {
@@ -1062,7 +1073,6 @@ section,
 
 .about .content h5 {
   font-weight: 500;
-  color: color-mix(in srgb, var(--heading-color), transparent 20%);
 }
 
 .about .content p {
@@ -1077,7 +1087,6 @@ section,
 
 .about .features-list .feature-item {
   padding: 20px;
-  background-color: var(--surface-color);
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -1169,13 +1178,11 @@ section,
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 25px;
-  color: var(--heading-color);
   line-height: 1.3;
 }
 
 .features .intro-content p {
   font-size: 18px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 35px;
   line-height: 1.6;
 }
@@ -1199,7 +1206,6 @@ section,
 
 .features .intro-content .feature-stats .stat-item .stat-label {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
   font-weight: 500;
   margin-top: 5px;
   display: block;
@@ -1249,7 +1255,6 @@ section,
 
 .features .feature-item {
   position: relative;
-  background: var(--surface-color);
   padding: 35px;
   border-radius: 20px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
@@ -1274,7 +1279,7 @@ section,
   right: 25px;
   font-size: 48px;
   font-weight: 900;
-  color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: color-mix(in srgb, #000, transparent 80%);
   line-height: 1;
   z-index: 1;
 }
@@ -1306,13 +1311,11 @@ section,
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 18px;
-  color: var(--heading-color);
   line-height: 1.3;
 }
 
 .features .feature-item .feature-content p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin-bottom: 25px;
   line-height: 1.6;
 }
@@ -1878,7 +1881,6 @@ section,
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--heading-color);
   margin-bottom: 1.5rem;
 }
 
@@ -1891,7 +1893,6 @@ section,
 .services .intro-content .section-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 2rem;
 }
 
@@ -1930,7 +1931,6 @@ section,
 }
 
 .services .services-grid .service-card {
-  background: var(--surface-color);
   padding: 2rem;
   border-radius: 15px;
   height: 100%;
@@ -1938,6 +1938,7 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   position: relative;
   overflow: hidden;
+  background-color: #ffe09e;
 }
 
 .services .services-grid .service-card::before {
@@ -1977,7 +1978,7 @@ section,
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background: #fff;
   color: var(--accent-color);
   border-radius: 15px;
   font-size: 1.5rem;
@@ -1993,9 +1994,9 @@ section,
 }
 
 .services .services-grid .service-card .card-content .service-title a {
-  color: var(--heading-color);
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #000;
 }
 
 .services .services-grid .service-card .card-content .service-title a:hover {
@@ -2005,7 +2006,6 @@ section,
 .services .services-grid .service-card .card-content .service-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 0;
 }
 
@@ -2253,7 +2253,6 @@ section,
 }
 
 .testimonials .testimonial-item {
-  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--surface-color), var(--accent-color) 2%) 100%);
   border-radius: 20px;
   padding: 0;
   height: 100%;
@@ -2297,7 +2296,6 @@ section,
   position: relative;
   text-align: center;
   padding: 30px 30px 20px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--surface-color), var(--accent-color) 3%) 0%, var(--surface-color) 100%);
 }
 
 .testimonials .testimonial-header img {
@@ -2329,7 +2327,6 @@ section,
 .testimonials .testimonial-body p {
   font-size: 1rem;
   line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
   font-style: italic;
   text-align: center;
@@ -2365,13 +2362,11 @@ section,
 .testimonials .testimonial-footer h5 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--heading-color);
   margin: 0 0 5px;
 }
 
 .testimonials .testimonial-footer span {
   font-size: 0.85rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
   display: block;
   margin-bottom: 15px;
 }
@@ -2577,7 +2572,6 @@ section,
 }
 
 .stats .counters h2 {
-  color: var(--heading-color);
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -2588,7 +2582,6 @@ section,
 }
 
 .stats .counters p {
-  color: var(--default-color);
   font-size: 18px;
   margin: 0;
   opacity: 0.9;
@@ -3166,7 +3159,7 @@ section,
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: var(--heading-color);
+  color: #000;
   position: relative;
   display: inline-block;
 }
@@ -3185,7 +3178,6 @@ section,
 .contact .contact-info-section .info-header p {
   font-size: 16px;
   line-height: 1.7;
-  color: var(--default-color);
   margin-bottom: 0;
 }
 
@@ -3201,7 +3193,6 @@ section,
   align-items: flex-start;
   gap: 20px;
   padding: 25px;
-  background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--surface-color), var(--accent-color) 3%));
   border-radius: 15px;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   transition: all 0.3s ease;
@@ -3225,8 +3216,8 @@ section,
   width: 55px;
   height: 55px;
   flex-shrink: 0;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   border-radius: 12px;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3235,7 +3226,7 @@ section,
 
 .contact .contact-info-section .info-item .info-icon i {
   font-size: 24px;
-  color: var(--accent-color);
+  
   transition: all 0.3s ease;
 }
 
@@ -3919,10 +3910,11 @@ table{
 .accordion-button {
   background-color: #fff;
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.05rem;
   padding: 12px 16px;
   border: none;
+
  
   transition: background-color 0.3s, color 0.3s;
   position: relative;
@@ -4345,4 +4337,27 @@ table{
 }
 #applicantPrefix, #relationPrefix{
   max-width: 80px;
+}
+.info-item{
+  background-color: var(--accent-color);
+}
+
+
+.notFound .cta-button {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.services .cta-button:hover {
+  background: color-mix(in srgb, var(--accent-color), black 10%);
+  color: var(--contrast-color);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
