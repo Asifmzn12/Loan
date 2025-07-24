@@ -459,22 +459,9 @@ p{
   padding-top: 50px;
 }
 
-.footer .footer-about .logo {
-  line-height: 1;
-  margin-bottom: 25px;
-}
 
-.footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
-}
-
-.footer .footer-about .logo span {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 1px;
+.footer .footer-about .logo img{
+  max-width: 140px;
 }
 
 .footer .footer-about p {
@@ -3939,18 +3926,7 @@ table{
   background-color: var(--accent-color);
 }
 
-.icon-box {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--accent-color); /* Primary color border */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 18px;
-}
+
 .icon-box i {
   color: var(--accent-color);
 }
@@ -4360,4 +4336,30 @@ table{
   color: var(--contrast-color);
   transform: translateY(-3px);
   box-shadow: 0 12px 35px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.uplubdhAbout p, .uplubdhAbout ol li,.uplubdhAbout ul li {
+font-size: 16px;
+}
+
+.icon-box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #bd8e0c; /* Primary color border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 18px;
+}
+
+.sndmsgbtn{
+  background-color: var(--accent-color);
+  color: white;
+  transition: all 0,3s ease-in;
+}
+.sndmsgbtn:hover{
+  background-color: #deb866 ;
 }
