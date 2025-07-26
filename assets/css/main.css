@@ -887,7 +887,7 @@ section,
 }
 
 .hero .hero-image-showcase .floating-card.card-1 {
-  top: 20%;
+  top: 4%;
   left: -60px;
   animation: float 3s ease-in-out infinite;
 }
