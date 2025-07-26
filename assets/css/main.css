@@ -3996,7 +3996,7 @@ table{
 }
 
 .email-box button {
-    background: #eee;
+    background: var(--accent-color);
     border: none;
     padding: 8px 12px;
     cursor: pointer;
