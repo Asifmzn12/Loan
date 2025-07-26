@@ -1,10 +1,4 @@
-/**
-* Template Name: Instant
-* Template URL: https://Asif-Ali.com/newtemplate-bootstrap-website-template/
-* Updated: Jul 07 2025 with Bootstrap v5.3.7
-* Author: Asif-Ali.com
-* License: https://Asif-Ali.com/license/
-*/
+
 
 (function() {
   "use strict";
