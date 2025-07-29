@@ -11,7 +11,7 @@
         rel="stylesheet">
 
     <!-- Favicons -->
-    <link href="assets/img/uplabdhFavicon.jpeg" rel="icon">
+    <link href="assets/img/favicon.ico" rel="icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -37,7 +37,8 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container position-relative d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/uplabdhLogo.webp" alt="">
+      <img class="logo default-logo" src="assets/img/Uplabdh--logo.png" alt="Default Logo">
+        <img class="logo scrolled-logo" src="assets/img/uplapdh-scrooledlogo.webp" alt="Scrolled Logo">
     </a>
 
     <nav id="navmenu" class="navmenu">
@@ -208,7 +209,7 @@
 
                                 <div class="col-md-6">
                                     <label for="dob" class="form-label form-label-custom">Date of Birth*</label>
-                                    <input type="text" class="form-control" id="dob"
+                                    <input type="date" class="form-control" id="dob"
                                         placeholder="dd/MM/yyyy eg.01/Jan/2000" required>
                                 </div>
                                 <div class="col-md-6">
@@ -238,11 +239,7 @@
                                         Qualification</label>
                                     <input type="text" class="form-control" id="educationQualification" placeholder="">
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="presentOccupation" class="form-label form-label-custom">Present
-                                        Occupation</label>
-                                    <input type="text" class="form-control" id="presentOccupation" placeholder="">
-                                </div>
+                               
 
                                 <div class="col-md-6">
                                     <label for="identityProof" class="form-label form-label-custom">Identity
@@ -269,10 +266,15 @@
                                         <option>Bank Statement</option>
                                     </select>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-6">
                                     <label for="addressProofNumber" class="form-label form-label-custom">Address Proof
                                         Number</label>
                                     <input type="text" class="form-control" id="addressProofNumber" placeholder="">
+                                </div>
+                                 <div class="col-12">
+                                    <label for="presentOccupation" class="form-label form-label-custom">Present
+                                        Occupation</label>
+                                    <input type="text" class="form-control" id="presentOccupation" placeholder="">
                                 </div>
 
                                 <div class="col-md-4 col-lg-3 col-6 mt-4">
@@ -428,18 +430,11 @@
                                         <input class="form-check-input" type="checkbox" id="termsCondition1" required>
                                         <label class="form-check-label" for="termsCondition1">
                                             I have read and understand the T&C of the company and I am accepting the
-                                            terms and Conditions of Shubh Bhavishya Nidhi Limited, <a href="#"
+                                            terms and Conditions of Uplabdh Nidhi Limited, <a href="terms-policies.html"
                                                 class="text-decoration-none">click here</a>
                                         </label>
                                     </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" id="termsCondition2" required>
-                                        <label class="form-check-label" for="termsCondition2">
-                                            I have read and understand the T&C of the company and I am accepting the
-                                            terms and Conditions of Shubh Bhavishya Nidhi Limited, <a href="#"
-                                                class="text-decoration-none">click here</a>
-                                        </label>
-                                    </div>
+                                    
                                 </div>
 
                                 <div class="col-12 mt-4">
@@ -470,7 +465,7 @@
 
         <div class="col-lg-4 col-md-6 footer-about">
            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-              <img src="assets/img/uplabdhLogo.webp" alt="">
+              <img class="logo" src="assets/img/uplapdh-footerLogo.webp" alt="Default Logo">
             </a>
           <div class="footer-contact pt-3">
             <p>UPLABDH NIDHI LIMITED</p>
@@ -524,7 +519,7 @@ Bhopal - 462022, Madhya Pradesh, INDIA.</p>
           <ul class="customlink">
             <li><a href="terms-policies.html">Terms & Policies</a></li>
             
-            <li><a href="404.html">Rates & Charges</a></li>
+            
             <li><a href="404.html">Forms</a></li>
             <li><a href="rbi-advisory.html">RBI Advisory Notifications</a></li>
             <li><a href="services-differently-abled.html">Services for Differently Abled</a></li>

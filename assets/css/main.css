@@ -4397,3 +4397,21 @@ font-size: 16px;
     max-width: 200px;
   }
 }
+
+
+/* Hide scrolled version by default */
+.scrolled-logo {
+  display: none;
+}
+
+/* When body has .scrolled, show the scrolled logo and hide default */
+body.scrolled .default-logo {
+  display: none;
+}
+
+body.scrolled .scrolled-logo {
+  display: inline;
+}
+.form-check .form-check-input{
+  border: 1px solid;
+}
