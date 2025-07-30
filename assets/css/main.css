@@ -4410,3 +4410,7 @@ body.scrolled .scrolled-logo {
 .form-check .form-check-input{
   border: 1px solid;
 }
+
+.img-container .img-box{
+  max-width: 230px;
+}
