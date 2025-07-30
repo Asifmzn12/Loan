@@ -4372,6 +4372,12 @@ font-size: 16px;
 .communication .nav-tabs{
  gap: 10px;
 }
+@media (min-width:992px) {
+  .img-container .img-box{
+  max-width: 230px;
+}
+}
+
 
 @media (max-width:991px){
   .img-box{
@@ -4411,6 +4417,3 @@ body.scrolled .scrolled-logo {
   border: 1px solid;
 }
 
-.img-container .img-box{
-  max-width: 230px;
-}
