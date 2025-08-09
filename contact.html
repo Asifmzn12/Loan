@@ -7,12 +7,15 @@
   <title>Contact Us - Uplabdh Nidhi Limited</title>
 
   <!-- Meta Description and Keywords -->
-  <meta name="description" content="Get in touch with Uplabdh Nidhi Limited. Contact us at 1800-121-7073 or email info@uplabdh.in. We are here to help you with your financial needs.">
-  <meta name="keywords" content="Uplabdh, Uplabdh Nidhi Limited, Contact Uplabdh, Nidhi Company India, Customer Support, Financial Services, Deposit Schemes, Gold Loan, Contact Information">
+  <meta name="description"
+    content="Get in touch with Uplabdh Nidhi Limited. Contact us at 1800-121-7073 or email info@uplabdh.in. We are here to help you with your financial needs.">
+  <meta name="keywords"
+    content="Uplabdh, Uplabdh Nidhi Limited, Contact Uplabdh, Nidhi Company India, Customer Support, Financial Services, Deposit Schemes, Gold Loan, Contact Information">
 
   <!-- Open Graph / Facebook Meta -->
   <meta property="og:title" content="Contact Us - Uplabdh Nidhi Limited">
-  <meta property="og:description" content="Reach out to Uplabdh Nidhi Limited for support or inquiries. Call us at 1800-121-7073 or email info@uplabdh.in.">
+  <meta property="og:description"
+    content="Reach out to Uplabdh Nidhi Limited for support or inquiries. Call us at 1800-121-7073 or email info@uplabdh.in.">
   <meta property="og:url" content="https://www.uplabdh.in/contact">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.uplabdh.in/assets/img/social-share-banner.webp">
@@ -24,10 +27,13 @@
   <meta name="twitter:image" content="https://www.uplabdh.in/assets/img/social-share-banner.webp">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Raleway:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
@@ -41,6 +47,18 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+<style>
+  label.required::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+}
+.error-message{
+  font-size: 14px;
+}
+
+</style>
 </head>
 
 
@@ -148,7 +166,7 @@
             </div>
 
             <h5>Head Office</h5>
-            <div class="d-flex gap-2 align-items-center" >
+            <div class="d-flex gap-2 align-items-center">
               <div class="icon-box">
                 <i class="bi bi-geo-alt-fill"></i>
               </div>
@@ -158,26 +176,35 @@
           </div>
         </div>
         <div class="col-md-6">
-          <form>
+          <form id="contactForm" novalidate>
             <div class="row mb-3">
               <div class="col">
-                <label class="form-label">First Name</label>
-                <input type="text" class="form-control" placeholder="First Name">
+                <label class="form-label required">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" pattern="[A-Za-z\s]+"
+                  title="Only letters and spaces are allowed"
+                  oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+                <div class="error-message text-danger" id="error-firstName"></div>
               </div>
+
               <div class="col">
-                <label class="form-label">Last Name</label>
-                <input type="text" class="form-control" placeholder="Last Name">
+                <label class="form-label required">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" pattern="[A-Za-z\s]+"
+                  title="Only letters and spaces are allowed"
+                  oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+                <div class="error-message text-danger" id="error-lastName"></div>
               </div>
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-control" placeholder="Enter your email">
+              <label class="form-label required">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              <div class="error-message text-danger" id="error-email"></div>
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Message</label>
-              <textarea class="form-control" rows="4" placeholder="Type something..."></textarea>
+              <label class="form-label required">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Type something..." required></textarea>
+              <div class="error-message text-danger" id="error-message"></div>
             </div>
 
             <div class="form-check mb-2">
@@ -188,14 +215,16 @@
             </div>
 
             <div class="form-check mb-4">
-              <input class="form-check-input" type="checkbox" id="dataConsent">
-              <label class="form-check-label" for="dataConsent">
+              <input class="form-check-input" type="checkbox" id="dataConsent" required>
+              <label class="form-check-label required" for="dataConsent">
                 I give my consent to store my data.
               </label>
+              <div class="error-message text-danger" id="error-dataConsent"></div>
             </div>
 
             <button type="submit" class="btn px-4 py-2 sndmsgbtn">Send Message</button>
           </form>
+
         </div>
 
         <!-- Image and Contact Info -->
@@ -216,13 +245,14 @@
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
               <img class="logo default-logo" src="assets/img/Uplabdh--logo.png" alt="Default Logo">
-        <img class="logo scrolled-logo" src="assets/img/uplapdh-scrooledlogo.webp" alt="Scrolled Logo">
+              <img class="logo scrolled-logo" src="assets/img/uplapdh-scrooledlogo.webp" alt="Scrolled Logo">
             </a>
             <div class="footer-contact pt-3">
               <p></p>UPLABDH NIDHI LIMITED</p>
               <p>CIN: U65990MP2019PLC047912
-<br>F-15, Surendra Manik, Awadhpuri, <br>
-Bhopal - 462022, Madhya Pradesh, INDIA.</p>
+                <br>F-15, Surendra Manik, Awadhpuri, <br>
+                Bhopal - 462022, Madhya Pradesh, INDIA.
+              </p>
               <p class="mt-3"><strong>Phone:</strong> <span>1800-121-7073</span></p>
               <p><strong>Email:</strong> <span>info@uplabdh.in</span></p>
             </div>
@@ -261,7 +291,7 @@ Bhopal - 462022, Madhya Pradesh, INDIA.</p>
             <h4>Tools and Resources</h4>
             <ul>
               <li><a href="loan-calculator.html">Loan Calculator</a></li>
-              
+
             </ul>
           </div>
 
@@ -269,8 +299,8 @@ Bhopal - 462022, Madhya Pradesh, INDIA.</p>
             <h4 class="widget-title">Terms, Policies & Regulations</h4>
             <ul class="customlink">
               <li><a href="terms-policies.html">Terms & Policies</a></li>
-              
-              
+
+
               <li><a href="forms-documents.html">Forms</a></li>
               <li><a href="rbi-advisory.html">RBI Advisory Notifications</a></li>
               <li><a href="services-differently-abled.html">Services for Differently Abled</a></li>
@@ -279,7 +309,7 @@ Bhopal - 462022, Madhya Pradesh, INDIA.</p>
                   Kehta Hai</a></li>
               <li><a href="communication-archives.html">Communication Archives</a></li>
               <li><a href="financial-literacy-week-2021.html">Financial Literacy Week 2021</a></li>
-                <li><a href="grievance-redressal.html">Report Unauthorized Transactions</a></li>
+              <li><a href="grievance-redressal.html">Report Unauthorized Transactions</a></li>
               <li><a href="csr.html">CSR</a></li>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
@@ -293,17 +323,17 @@ Bhopal - 462022, Madhya Pradesh, INDIA.</p>
           class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
           <div class="d-flex flex-column align-items-center align-items-lg-start">
             <div>© Copyright <strong><span>UPLABDH NIDHI LIMITED</span></strong>. All Rights Reserved</div>
+          </div>
+
         </div>
-            
-          </div>
-          <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
+    </div>
   </footer>
 
   <!-- Scroll Top -->
@@ -321,7 +351,46 @@ Bhopal - 462022, Madhya Pradesh, INDIA.</p>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      let valid = true;
 
+      // Clear old errors
+      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+      // First Name
+      if (!document.getElementById('firstName').checkValidity()) {
+        document.getElementById('error-firstName').textContent = 'Please enter a valid first name.';
+        valid = false;
+      }
+
+      // Last Name
+      if (!document.getElementById('lastName').checkValidity()) {
+        document.getElementById('error-lastName').textContent = 'Please enter a valid last name.';
+        valid = false;
+      }
+
+      // Email
+      if (!document.getElementById('email').checkValidity()) {
+        document.getElementById('error-email').textContent = 'Please enter a valid email.';
+        valid = false;
+      }
+
+      // Message
+      if (!document.getElementById('message').checkValidity()) {
+        document.getElementById('error-message').textContent = 'Please enter your message.';
+        valid = false;
+      }
+
+      // Consent
+      if (!document.getElementById('dataConsent').checked) {
+        document.getElementById('error-dataConsent').textContent = 'You must consent to store your data.';
+        valid = false;
+      }
+
+      if (!valid) e.preventDefault();
+    });
+  </script>
 </body>
 
 </html>
