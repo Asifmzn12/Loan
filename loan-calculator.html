@@ -42,7 +42,22 @@
   <meta name="contact" content="1800-121-7073">
   <meta name="email" content="support@uplabdh.in">
   <meta name="website" content="https://www.uplabdh.in">
+ <style>
+  #loanChart{
+      max-width: 190px;
+      max-height: 190px;
+    }
+  @media (min-width:768px) {
+    #loanChart{
+      max-width: 250px;
+      max-height: 250px;
+    }
+    
+  }
+  
 
+  
+ </style>
 </head>
 
 
@@ -132,20 +147,22 @@
           <form id="universalLoanCalculator" class="shadow p-4 rounded">
             <div class="mb-3">
               <label for="loanAmountInput" class="form-label">Loan Amount (₹)</label>
-              <input type="number" id="loanAmountInput" class="form-control" min="1" placeholder="Enter loan amount"
-                required>
+              <input type="text" id="loanAmountInput" class="form-control" autocomplete="off" placeholder="Enter loan amount" required>
+              <span id="loanAmountError" class="text-danger small"></span>
             </div>
 
             <div class="mb-3">
               <label for="interestRateInput" class="form-label">Interest Rate (% per annum)</label>
-              <input type="number" id="interestRateInput" class="form-control" min="0.01" step="0.01"
-                placeholder="Annual interest rate" required>
+              <input type="text" id="interestRateInput" class="form-control" autocomplete="off" placeholder="Annual interest rate"
+                required>
+              <span id="interestRateError" class="text-danger small"></span>
             </div>
 
             <div class="mb-3">
               <label for="loanTenureInput" class="form-label">Loan Tenure (in months)</label>
-              <input type="number" id="loanTenureInput" class="form-control" min="1"
-                placeholder="Enter tenure in months" required>
+              <input type="text" id="loanTenureInput" class="form-control" autocomplete="off" placeholder="Enter tenure in months"
+                required>
+              <span id="loanTenureError" class="text-danger small"></span>
             </div>
 
             <button type="button" class="btn btn-primary px-4 py-2 mb-2 loansButton w-100 fw-semibold"
@@ -164,7 +181,7 @@
 
               </div>
               <div class="col">
-                <canvas id="loanChart" style="max-width:250px; max-height:250px;"></canvas>
+                <canvas id="loanChart"></canvas>
 
               </div>
             </div>
@@ -281,7 +298,7 @@
   <!-- Vendor JS Files -->
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
+
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -294,29 +311,67 @@
   <script src="assets/js/main.js"></script>
 
 
-  <!-- Loan calculator -->
 
 
- <script>
+  <script>
+
+  function restrictInputToNumbers(event) {
+    let value = event.target.value.replace(/[^0-9.]/g, ''); 
+    const parts = value.split('.');
+
+  
+    if (parts.length > 2) {
+      value = parts[0] + '.' + parts[1];
+    }
+    event.target.value = value;
+  }
+
+  ['loanAmountInput', 'interestRateInput', 'loanTenureInput'].forEach(id => {
+    document.getElementById(id).addEventListener('input', restrictInputToNumbers);
+  });
+
+  function showError(id, message) {
+    document.getElementById(id).textContent = message;
+  }
+
+  function clearErrors() {
+    showError('loanAmountError', '');
+    showError('interestRateError', '');
+    showError('loanTenureError', '');
+  }
+
   function calculateUniversalLoan() {
-    const principal = parseFloat(document.getElementById('loanAmountInput').value);
-    const annualInterestRate = parseFloat(document.getElementById('interestRateInput').value);
-    const tenureMonths = parseInt(document.getElementById('loanTenureInput').value);
+    clearErrors();
 
-    // Validation checks
-    if (isNaN(principal) || isNaN(annualInterestRate) || isNaN(tenureMonths)) {
-      alert('Please enter valid numbers for all fields.');
-      return;
+    let principal = parseFloat(document.getElementById('loanAmountInput').value);
+    let annualInterestRate = parseFloat(document.getElementById('interestRateInput').value);
+    let tenureMonths = parseInt(document.getElementById('loanTenureInput').value);
+
+    let isValid = true;
+
+    if (isNaN(principal) || principal <= 0) {
+      showError('loanAmountError', 'Please enter a valid loan amount.');
+      isValid = false;
+    }
+    if (isNaN(annualInterestRate) || annualInterestRate <= 0) {
+      showError('interestRateError', 'Please enter a valid interest rate.');
+      isValid = false;
+    }
+    if (isNaN(tenureMonths) || tenureMonths <= 0) {
+      showError('loanTenureError', 'Please enter a valid tenure in months.');
+      isValid = false;
     }
 
-    if (principal <= 0 || annualInterestRate <= 0 || tenureMonths <= 0) {
-      alert('Values must be greater than zero.');
-      return;
-    }
+    if (!isValid) return; 
+
+    
+    principal = Math.abs(principal);
+    annualInterestRate = Math.abs(annualInterestRate);
+    tenureMonths = Math.abs(tenureMonths);
 
     const monthlyInterestRate = annualInterestRate / 12 / 100;
     const emi = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, tenureMonths)) /
-      (Math.pow(1 + monthlyInterestRate, tenureMonths) - 1);
+                (Math.pow(1 + monthlyInterestRate, tenureMonths) - 1);
 
     const totalPayment = emi * tenureMonths;
     const totalInterest = totalPayment - principal;
@@ -325,9 +380,45 @@
     document.getElementById('totalInterest').textContent = totalInterest.toFixed(2);
     document.getElementById('totalPayment').textContent = totalPayment.toFixed(2);
 
-    drawChart(principal, totalInterest);
+    if (typeof drawChart === 'function') {
+      drawChart(principal, totalInterest);
+    }
   }
 </script>
+<script>
+  let loanChartInstance = null;
+
+  function drawChart(principal, interest) {
+    const ctx = document.getElementById('loanChart').getContext('2d');
+
+    if (loanChartInstance !== null) {
+      loanChartInstance.destroy();
+    }
+
+    loanChartInstance = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Principal', 'Interest'],
+        datasets: [{
+          data: [principal, interest],
+          backgroundColor: ['#007bff', '#ffc107'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  }
+</script>
+
+
+
 
 
 </body>
